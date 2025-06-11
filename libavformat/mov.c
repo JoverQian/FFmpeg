@@ -11197,7 +11197,7 @@ static int mov_seek_stream(AVFormatContext *s, AVStream *st, int64_t timestamp, 
         }
     }
 
-    /* adjust stsd index */
+    /* adjust sample-to-chunk (stsc) index */
     if (sc->chunk_count) {
         time_sample = 0;
         for (i = 0; i < sc->stsc_count; i++) {
